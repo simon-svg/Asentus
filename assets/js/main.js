@@ -26,6 +26,7 @@ window.addEventListener("resize", () => {
 // home carusel
 const homeCarusel = document.querySelector(".home__carusel");
 const homePanelItems = document.querySelectorAll(".home__panel_item");
+const customerCont = document.querySelector(".customer__cont");
 let homeCaruselBool = true;
 
 homePanelItems[0].addEventListener("click", () => {
@@ -43,11 +44,13 @@ setInterval(() => {
         homeCarusel.style.transform = "translateX(-50%)";
         homePanelItems[0].style["background-color"] = "var(--transparent)";
         homePanelItems[1].style["background-color"] = "var(--white)";
+        customerCont.style.transform = "translateX(-50%)";
     }
     else {
         homeCarusel.style.transform = "translateX(0%)";
         homePanelItems[0].style["background-color"] = "var(--white)";
         homePanelItems[1].style["background-color"] = "var(--transparent)";
+        customerCont.style.transform = "translateX(0%)";
     }
     homeCaruselBool = !homeCaruselBool;
 }, 4000);
