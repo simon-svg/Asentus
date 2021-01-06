@@ -174,7 +174,6 @@ section{
     line-height: 1.4;
 }
 .home__par{
-    margin-bottom: 15px;
     margin: 0 0 45px;
 }
 .button{
@@ -237,7 +236,8 @@ items
 */
 
 .items,
-.clients{
+.clients,
+.showcase{
     background-color: var(--sectionColor);
 }
 .items__item{
@@ -304,12 +304,10 @@ products title
 .section-title{
     font-size: 30px;
     font-weight: 700;
+    text-transform: capitalize;
     color: var(--headerinColor);
     line-height: 1.4;
     margin: 0 0 15px;
-}
-.products__title{
-    text-transform: capitalize;
 }
 .products__img{
     width: 100%;
@@ -373,7 +371,6 @@ customer
 
 .customer__hidden{
     overflow: hidden;
-    padding: 0;
 }
 .customer__cont{
     width: 200%;
@@ -445,4 +442,83 @@ pricing
 .pricing__item_btn:hover{
     color: var(--white);
     background-color: var(--aqua);
+}
+
+/*
+clients
+*/
+
+.clients-info{
+    position: relative;
+}
+.clients-info__last-par{
+    margin-top: 10px;
+}
+.clients-info__img_cont{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+.clients-info__img{
+    width: 100%;
+    display: block;
+}
+
+/*
+showcase
+*/
+
+.showcase__item{
+    position: relative;
+    padding: 2px;
+    background-color: var(--sectionColor);
+}
+.showcase__item_img{
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity ease .3s;
+    -webkit-transition: opacity ease .3s;
+    -moz-transition: opacity ease .3s;
+    -ms-transition: opacity ease .3s;
+    -o-transition: opacity ease .3s;
+}
+.showcase__item_cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--sectionColor);
+    background-color: var(--black);
+    z-index: 1;
+}
+.showcase__item:hover .showcase__item_img{
+    opacity: .4;
+}
+.showcase__item:hover .showcase__item_bot{
+    opacity: 1;
+    bottom: 25px;
+}
+.showcase__item_bot{
+    position: absolute;
+    bottom: 0px;
+    left: 25px;
+    z-index: 3;
+    opacity: 0;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+}
+.showcase__item_title,
+.showcase__item_par{
+    color: var(--white);
 }
