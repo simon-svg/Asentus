@@ -1,0 +1,12 @@
+@media screen and (max-width: 992px) {
+    .header__nav,
+    .header__list{
+        height: auto;
+    }
+    .header__nav{
+        background-color: #f8f9fa;
+    }
+    .header__item{
+        padding: 12px 0;
+    }
+}
