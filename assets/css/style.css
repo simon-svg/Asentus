@@ -428,6 +428,7 @@ pricing
 
 .pricing__cont{
     width: 100%;
+    margin: 0;
 }
 .pricing__item{
     padding: 70px 45px;

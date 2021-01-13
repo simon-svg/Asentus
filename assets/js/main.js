@@ -36,6 +36,7 @@ setInterval(() => {
 
 // document event
 const header = document.querySelector(".header");
+const navbar = document.querySelector(".navbar");
 const headerLinks = document.querySelectorAll(".header__link");
 const logoImg = document.querySelector(".logo__img");
 let headerBool = true;
@@ -68,14 +69,11 @@ document.addEventListener("scroll", () => {
 
 
 // header
-const navbar = document.querySelector(".navbar");
 let navbarBool = true;
 
 window.addEventListener("resize", () => {
     if (window.innerWidth < 992) {
         if (navbarBool) {
-            navbar.classList.add("navbar-light");
-            navbar.classList.add("bg-light");
             navbarBool = false;
 
             header.style["background-color"] = "var(--white)";
@@ -87,10 +85,13 @@ window.addEventListener("resize", () => {
         }
     }
     else {
-        if (!navbarBool) {
-            navbar.classList.remove("navbar-light");
-            navbar.classList.remove("bg-light");
-            navbarBool = true;
+        if (scrollY < 50) {
+            if (!navbarBool) {
+                navbarBool = true;
+
+               
+                headerBool = true;
+            }
         }
     }
 })
