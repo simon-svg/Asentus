@@ -612,3 +612,6 @@ footer
 .footer__bot_link:hover{
     color: #63cbd7;
 }
+.footer__bot_par{
+    margin: 0;
+}
